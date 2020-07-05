@@ -1,333 +1,378 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Principales -->
-    <link rel="icon" type="favicon/x-icon" href="img/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
-    
-    <style>
-      .row > .column {
-        padding: 0 8px;
-      }
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+  <!-- Principales -->
+  <link rel="icon" type="favicon/x-icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
 
-      .column {
-        float: left;
-        width: 25%;
-      }
+  <style>
+    .row>.column {
+      padding: 0 8px;
+    }
 
-      /* Create four equal columns that floats next to eachother */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-      /* The Modal (background) */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 1;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: black;
-      }
+    .column {
+      float: left;
+      width: 25%;
+    }
 
-      /* Modal Content */
-      .modal-content {
-        position: relative;
-        background-color: #fefefe;
-        margin: auto;
-        padding: 0;
-        width: 90%;
-        max-width: 1200px;
-      }
+    /* Create four equal columns that floats next to eachother */
 
-      /* The Close Button */
-      .close {
-        color: white;
-        position: absolute;
-        top: 10px;
-        right: 25px;
-        font-size: 35px;
-        font-weight: bold;
-      }
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
 
-      .close:hover,
-      .close:focus {
-        color: #999;
-        text-decoration: none;
-        cursor: pointer;
-      }
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+    }
 
-      /* Hide the slides by default */
-      .mySlides {
-        display: none;
-      }
+    /* The Close Button */
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
 
-      /* Next & previous buttons */
-      .prev,
-      .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-      }
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-      /* Position the "next button" to the right */
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
+    /* Hide the slides by default */
+    .mySlides {
+      display: none;
+    }
 
-      /* On hover, add a black background color with a little bit see-through */
-      .prev:hover,
-      .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
 
-      /* Number text (1/3 etc) */
-      .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-      }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
 
-      /* Caption text */
-      .caption-container {
-        text-align: center;
-        background-color: black;
-        padding: 2px 16px;
-        color: white;
-      }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-      img.demo {
-        opacity: 0.6;
-      }
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
 
-      .active,
-      .demo:hover {
-        opacity: 1;
-      }
+    /* Caption text */
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
 
-      img.hover-shadow {
-        transition: 0.3s;
-      }
+    img.demo {
+      opacity: 0.6;
+    }
 
-      .hover-shadow:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      </style>
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
 
-    <title>Galeria | Verona trans</title>
-  </head>
-  <body>
-    
-      <!-- Menu -->
-      <header role="banner">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-          <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarsExample05">
-              <ul class="navbar-nav mx-auto pl-lg-5 pl-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">Sobre Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="aliance.html">Nuestros aliados</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="services.html">Servicios</a>
-                </li>
-                <li class="nav-item  active">
-                  <a class="nav-link" href="galery.html">Galeria</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contacto</a>
-                </li>
-              </ul>
-              
-            </div>
-          </div>
-        </nav>
-      </header>
-      <!-- Fin Menu -->
-  
-      <!-- Slider -->
-      <section class="row" id="slider">
-        <img src="img/logocopia.png">
-      </section>
-      <!-- Fin Slider -->
+    img.hover-shadow {
+      transition: 0.3s;
+    }
 
-      <!-- Section -->
-      <section class="row" id="galery">
-        <div class="container mt-5">
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 
-          <div class="row justify-content-center mb-5">
-            
-            <div class="col-md-10">
-              <h1>Galeria</h1>
-            </div>
-          </div>
+    .containerss {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
 
-          <!-- Images used to open the lightbox -->
-          <div class="row mb-3">
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width: 400px;" class="crop">
-            </div>
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width: 600px;" class="crop">
-            </div>
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width: 400px;" class="crop">
-            </div>
-          </div>
+    .containerss>.crop {
+      position: absolute;
+      left: -100%; 
+      right: -100%;
+      top: -100%;
+      bottom: -100%;
+      margin: auto;
+      min-height: 50%;
+      min-width: 50%;
+    }
+  </style>
 
-          <div class="row mb-5">
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width: 400px;" class="crop">
-            </div>
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow" style="width: 400px;" class="crop">
-            </div>
-            <div class="col-12 col-md-4 containerss">
-              <img src="Galery/images/6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow" style="width: 600px;" class="crop">
-            </div>
-          </div>
+  <title>Galeria | Verona trans</title>
+</head>
 
-          <!-- The Modal/Lightbox -->
-          <div id="myModal" class="modal mt-5">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
+<body>
 
-              <div class="mySlides">
-                <div class="numbertext">1 / 6</div>
-                <img src="Galery/images/1.jpg" style="width:100%; height: 700px;">
-              </div>
+  <!-- Menu -->
+  <header role="banner">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-              <div class="mySlides">
-                <div class="numbertext">2 / 6</div>
-                <img src="Galery/images/2.jpg" style="width:100%; height: 700px;">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">3 / 6</div>
-                <img src="Galery/images/3.jpg" style="width:100%; height: 700px;">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">4 / 6</div>
-                <img src="Galery/images/4.jpg" style="width:100%; height: 700px;">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">5 / 6</div>
-                <img src="Galery/images/5.jpg" style="width:100%; height: 700px;">
-              </div>
-
-              <div class="mySlides">
-                <div class="numbertext">6 / 6</div>
-                <img src="Galery/images/6.jpg" style="width:100%; height: 700px;">
-              </div>
-
-              <!-- Next/previous controls -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-              <!-- Caption text -->
-              <div class="caption-container">
-                <p id="caption"></p>
-              </div>
-
-              <!-- Thumbnail image controls -->
-              
-            </div>
-          </div>
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto pl-lg-5 pl-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aliance.html">Nuestros aliados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Servicios</a>
+            </li>
+            <li class="nav-item  active">
+              <a class="nav-link" href="galery.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contacto</a>
+            </li>
+          </ul>
 
         </div>
-      </section>
-      <!-- Fin section -->
+      </div>
+    </nav>
+  </header>
+  <!-- Fin Menu -->
 
+  <!-- Slider -->
+  <section class="row" id="slider">
+    <img src="img/logocopia.png">
+  </section>
+  <!-- Fin Slider -->
 
-      <!-- Footer -->
-      <footer class="row" id="footer">
-        <div class="container">
-          <div class="row mb-5 mt-5">
-            <div class="col-md-4 mb-3">
-              <h3>Quienes Somos</h3>
-              <p class="mb-5">Nuestra empresa nació en el año 2013, con el objetivo de prestar servicio de transporte, enfocados en solucionar  a nuestros clientes  la entrega  y rapidez de sus productos, con  la necesidad de crecimiento de la compañía se buscaron otras alternativas como es la asistencia vial.</p>
-              
-  
-            </div>
-            <div class="col-12 col-md-4 col-sm-4 mb-3">
-              <h3>Información de contacto</h3>
-              <ul class="list-unstyled footer-link">
-                <li class="d-block">
-                  <span class="d-block"> <strong> Dirección:</strong></span>
-                  <span class="text-white">Cll 65 #74-105 Parqueadero San German. Oficina Gruas</span></li>
-                <li class="d-block"><span class="d-block"> <strong> Teléfono:</strong></span><span class="text-white"><a href="https://api.whatsapp.com/send?phone=573164916388&text=Me%20gustar%C3%ADa%20saber%20el%20precio%20del%20servicio%20de%20gr%C3%BAa" target="_blank">+57 316 491 6388</a> </span></li>
-                <li class="d-block"><span class="d-block"> <strong>Email:</strong></span><span class="text-white"><a href="mailto:contacto@veronatrans.com" target="_blank">contacto@veronatrans.com</a></span></li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-4 mb-3">
-              <h3>Horario Comercial</h3>
-              <ul class="list-unstyled footer-link">
-                <li>Lunes a Domingo de 6:00 am a 2:00 am</li>
-              </ul>
-            </div>
-            <div class="col-12 col-md-3">
-            
-            </div>
-            
-          </div>
-          <div class="row">
-            <div class="col-12 text-md-center text-left mb-2">
-              <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados por <a href="https://dangwebs.com" target="_blank">DangWebs</a></p>
-            </div>
-          </div>
+  <!-- Section -->
+  <section class="row" id="galery">
+    <div class="container mt-5">
+
+      <div class="row justify-content-center mb-5">
+
+        <div class="col-md-10">
+          <h1>Galeria</h1>
         </div>
-      </footer>
-  
-      <!-- Fin Footer -->
+      </div>
 
-    
-      <div id="wsp"><a href="https://api.whatsapp.com/send?phone=573164916388&text=Me%20gustar%C3%ADa%20saber%20el%20precio%20del%20servicio%20de%20gr%C3%BAa" target="_blank"><img src="img/wsp.png"></a></div>
-      <div id="instagram"><a href="https://www.instagram.com/gruasveronatrans/" target="_blank"><img src="img/insta.png"></a></div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <!-- Images used to open the lightbox -->
+      <div class="row mb-3">
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"
+            style="width: 400px;" class="crop">
+        </div>
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"
+            style="width: 600px;" class="crop">
+        </div>
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"
+            style="width: 400px;" class="crop">
+        </div>
+      </div>
 
-    <script src="js/gallery.js"></script>
-  </body>
+      <div class="row mb-5">
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"
+            style="width: 400px;" class="crop">
+        </div>
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/5.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow"
+            style="width: 400px;" class="crop">
+        </div>
+        <div class="col-12 col-md-4 containerss">
+          <img src="Galery/images/6.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow"
+            style="width: 600px;" class="crop">
+        </div>
+      </div>
+
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal mt-5">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="Galery/images/1.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="Galery/images/2.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="Galery/images/3.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="Galery/images/4.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="Galery/images/5.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="Galery/images/6.jpg" style="width:100%; height: 700px;">
+          </div>
+
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <!-- Thumbnail image controls -->
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Fin section -->
+
+
+  <!-- Footer -->
+  <footer class="row" id="footer">
+    <div class="container">
+      <div class="row mb-5 mt-5">
+        <div class="col-md-4 mb-3">
+          <h3>Quienes Somos</h3>
+          <p class="mb-5">Nuestra empresa nació en el año 2013, con el objetivo de prestar servicio de transporte,
+            enfocados en solucionar a nuestros clientes la entrega y rapidez de sus productos, con la necesidad de
+            crecimiento de la compañía se buscaron otras alternativas como es la asistencia vial.</p>
+
+
+        </div>
+        <div class="col-12 col-md-4 col-sm-4 mb-3">
+          <h3>Información de contacto</h3>
+          <ul class="list-unstyled footer-link">
+            <li class="d-block">
+              <span class="d-block"> <strong> Dirección:</strong></span>
+              <span class="text-white">Cll 65 #74-105 Parqueadero San German. Oficina Gruas</span></li>
+            <li class="d-block"><span class="d-block"> <strong> Teléfono:</strong></span><span class="text-white"><a
+                  href="https://api.whatsapp.com/send?phone=573164916388&text=Me%20gustar%C3%ADa%20saber%20el%20precio%20del%20servicio%20de%20gr%C3%BAa"
+                  target="_blank">+57 316 491 6388</a> </span></li>
+            <li class="d-block"><span class="d-block"> <strong>Email:</strong></span><span class="text-white"><a
+                  href="mailto:contacto@veronatrans.com" target="_blank">contacto@veronatrans.com</a></span></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <h3>Horario Comercial</h3>
+          <ul class="list-unstyled footer-link">
+            <li>Lunes a Domingo de 6:00 am a 2:00 am</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-12 text-md-center text-left mb-2">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> Todos los derechos reservados por <a
+              href="https://dangwebs.com" target="_blank">DangWebs</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fin Footer -->
+
+
+  <div id="wsp"><a
+      href="https://api.whatsapp.com/send?phone=573164916388&text=Me%20gustar%C3%ADa%20saber%20el%20precio%20del%20servicio%20de%20gr%C3%BAa"
+      target="_blank"><img src="img/wsp.png"></a></div>
+  <div id="instagram"><a href="https://www.instagram.com/gruasveronatrans/" target="_blank"><img
+        src="img/insta.png"></a></div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <script src="js/gallery.js"></script>
+</body>
+
 </html>
