@@ -1,5 +1,5 @@
 body {
-  /* background:rgb(79, 79, 79); */
+  background:rgb(79, 79, 79);
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   color: black; }
@@ -10,16 +10,18 @@ body {
   color: white;
   text-transform: uppercase;
   font-weight: bolder;
+  padding-right: -20px;
 }
 
 #slider {
   background: black;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 #slider img{
-  height: 700px;
+  width: 60%;
   animation: verona .5s linear;
 }
 
@@ -31,6 +33,30 @@ body {
   100% {
     transform: scale(1);
   }
+}
+
+#section {
+  color: white;
+  text-align: justify;
+}
+
+#footer {
+  background-color: black !important;
+  color: white;
+  text-align: justify;
+}
+
+#footer li{
+  margin-top: 10px;
+}
+
+#footer h3, p{
+  font-weight: bolder;
+}
+
+
+#footer a{
+  color: white;
 }
 
 
@@ -59,3 +85,4 @@ body {
   box-shadow: 0px 0px 10px white;
   border-radius: 17px;
 }
+
