@@ -50,7 +50,7 @@ body {
   margin-top: 10px;
 }
 
-#footer h3, p{
+#footer h3, #footer p{
   font-weight: bolder;
 }
 
@@ -295,4 +295,12 @@ form label {
 
 .d-flex {
   right: 50px;
+}
+
+section p {
+  font-weight: 600;
+}
+
+section h3 {
+  font-weight: bold;
 }
