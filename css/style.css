@@ -59,6 +59,10 @@ body {
   color: white;
 }
 
+#galery {
+  color: white;
+  text-align: justify;
+}
 
 #wsp img{
   width: 80px;
@@ -86,3 +90,51 @@ body {
   border-radius: 17px;
 }
 
+
+.containerss {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.containerss > .crop {
+  position:absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  min-height: 50%;
+  min-width: 50%;
+}
+
+
+@media and screen (max-width: 768px) {
+  .containerss {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .containerss img{
+    width: 100px !important;
+    height: 100px;
+  }
+
+  .containerss > .crop {
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  .mySlides img{
+    width: 100%;
+    height: 100%;
+  }
+}
