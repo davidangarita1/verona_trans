@@ -106,8 +106,92 @@ body {
     .half .image {
       height: 350px; } }
 
-      #lista {
-        color: #fff;
-        text-align: justify;
-        font-size: 16px;
-      }
+#lista {
+  color: #fff;
+  text-align: justify;
+  font-size: 16px;      
+}
+
+
+.link-thumbnail {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-align: center; }
+  @media (max-width: 991px) {
+    .link-thumbnail {
+      margin-bottom: 30px; } }
+  .link-thumbnail img {
+    position: relative;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+  .link-thumbnail .date {
+    display: block;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    margin-bottom: 10px; }
+  .link-thumbnail .icon {
+    position: absolute;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    z-index: 4;
+    top: 50%;
+    font-size: 30px;
+    color: #fff;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 30px; }
+  .link-thumbnail h3 {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 18px;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+    z-index: 10;
+    left: 50%;
+    display: block;
+    width: 77%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+  .link-thumbnail:before {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute; }
+  .link-thumbnail:hover h3 {
+    opacity: 1;
+    visibility: visible;
+    bottom: 30px; }
+  .link-thumbnail:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
+  .link-thumbnail:hover .icon {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0px; }
+  .link-thumbnail:hover:before {
+    opacity: 1;
+    visibility: visible; }
